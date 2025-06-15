@@ -5,7 +5,8 @@ https://github.com/nikitapryymak/formik-tutorial/tree/finished-files
 
 https://github.com/Annie-Huang/formik-tutorial
 
+https://formik.org/docs/api/useFormik
 ------------------------------------------------------------------
 
 PS C:\react> npx create-react-app formik-tutorial --template typescript --use-npm
-
+PS C:\react\formik-tutorial> npm install formik

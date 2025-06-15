@@ -29,7 +29,8 @@ nav h3 {
   color: #718096;
 }
 nav h3:hover {
-  color: white;
+  /*color: white;*/
+  color: darkgray;
 }
 
 form {

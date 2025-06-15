@@ -10,13 +10,13 @@ function App() {
       <nav>
         <h3
           onClick={() => setView('basic')}
-          style={{ color: view === 'basic' ? '#fff' : '' }}
+          style={{ color: view === 'basic' ? 'black' : '' }}
         >
           Basic
         </h3>
         <h3
           onClick={() => setView('advanced')}
-          style={{ color: view === 'advanced' ? '#fff' : '' }}
+          style={{ color: view === 'advanced' ? 'black' : '' }}
         >
           Advanced
         </h3>

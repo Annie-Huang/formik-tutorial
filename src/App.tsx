@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
+import BasicForm from './components/BasicForm';
+import AdvancedForm from './components/AdvancedForm';
 
 function App() {
   const [view, setView] = useState('basic');

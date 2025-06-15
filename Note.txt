@@ -1,0 +1,11 @@
+React Formik Tutorial with Yup (React Form Validation) (https://www.youtube.com/watch?v=7Ophfq0lEAY)
+
+https://github.com/nikitapryymak/formik-tutorial/tree/starting-files
+https://github.com/nikitapryymak/formik-tutorial/tree/finished-files
+
+https://github.com/Annie-Huang/formik-tutorial
+
+------------------------------------------------------------------
+
+PS C:\react> npx create-react-app formik-tutorial --template typescript --use-npm
+

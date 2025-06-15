@@ -10,3 +10,4 @@ https://formik.org/docs/api/useFormik
 
 PS C:\react> npx create-react-app formik-tutorial --template typescript --use-npm
 PS C:\react\formik-tutorial> npm install formik
+PS C:\react\formik-tutorial> npm install yup

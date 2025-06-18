@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import { basicSchema } from '../schemas';
 
 const BasicForm = () => {
   // const formik = useFormik({
@@ -10,6 +11,7 @@ const BasicForm = () => {
       password: '',
       confirmPassword: '',
     },
+    validationSchema: basicSchema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },

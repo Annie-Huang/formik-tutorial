@@ -1,10 +1,24 @@
 import React from 'react';
-import { useFormik } from 'formik';
+import { FormikHelpers, useFormik } from 'formik';
 import { basicSchema } from '../schemas';
 
-const onSubmit = () => {
+type Values = {
+  age: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+};
+
+const onSubmit = (values: Values, actions: FormikHelpers<Values>) => {
   // alert(JSON.stringify(values, null, 2));
-  console.log('submitted');
+  // console.log('submitted');
+
+  console.log(values);
+  console.log(actions);
+  /*
+   setStatus | setErrors | setSubmitting | setTouched | setValues | setFieldValue | setFieldError | setFieldTouched | validateForm
+   | validateField | resetForm | submitForm | setFormikState
+   */
 };
 
 const BasicForm = () => {

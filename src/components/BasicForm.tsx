@@ -9,7 +9,7 @@ const onSubmit = () => {
 
 const BasicForm = () => {
   // const formik = useFormik({
-  const { values, handleBlur, handleChange, handleSubmit } = useFormik({
+  const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: {
       email: '',
       age: '',
@@ -22,6 +22,7 @@ const BasicForm = () => {
 
   // console.log(formik);
   console.log('values =', values);
+  console.log('errors =', errors);
 
   return (
     <form onSubmit={handleSubmit} autoComplete='off'>

@@ -9,16 +9,17 @@ const onSubmit = () => {
 
 const BasicForm = () => {
   // const formik = useFormik({
-  const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
-    initialValues: {
-      email: '',
-      age: '',
-      password: '',
-      confirmPassword: '',
-    },
-    validationSchema: basicSchema,
-    onSubmit,
-  });
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
+    useFormik({
+      initialValues: {
+        email: '',
+        age: '',
+        password: '',
+        confirmPassword: '',
+      },
+      validationSchema: basicSchema,
+      onSubmit,
+    });
 
   // console.log(formik);
   console.log('values =', values);
@@ -35,6 +36,7 @@ const BasicForm = () => {
         value={values.email}
         onChange={handleChange}
         onBlur={handleBlur}
+        className={errors.email && touched.email ? 'input-error' : ''}
       />
 
       <label htmlFor='age'>Age</label>
@@ -45,6 +47,7 @@ const BasicForm = () => {
         value={values.age}
         onChange={handleChange}
         onBlur={handleBlur}
+        className={errors.age && touched.age ? 'input-error' : ''}
       />
 
       <label htmlFor='password'>Password</label>
@@ -55,6 +58,7 @@ const BasicForm = () => {
         value={values.password}
         onChange={handleChange}
         onBlur={handleBlur}
+        className={errors.password && touched.password ? 'input-error' : ''}
       />
 
       <label htmlFor='confirmPassword'>Confirm Password</label>
@@ -65,6 +69,9 @@ const BasicForm = () => {
         value={values.confirmPassword}
         onChange={handleChange}
         onBlur={handleBlur}
+        className={
+          errors.confirmPassword && touched.confirmPassword ? 'input-error' : ''
+        }
       />
 
       <button type='submit'>Submit</button>

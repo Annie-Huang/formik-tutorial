@@ -9,7 +9,7 @@ type Values = {
   confirmPassword: string;
 };
 
-const onSubmit = (values: Values, actions: FormikHelpers<Values>) => {
+const onSubmit = async (values: Values, actions: FormikHelpers<Values>) => {
   // alert(JSON.stringify(values, null, 2));
   // console.log('submitted');
 
@@ -19,6 +19,9 @@ const onSubmit = (values: Values, actions: FormikHelpers<Values>) => {
    setStatus | setErrors | setSubmitting | setTouched | setValues | setFieldValue | setFieldError | setFieldTouched | validateForm
    | validateField | resetForm | submitForm | setFormikState
    */
+
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  actions.resetForm();
 };
 
 const BasicForm = () => {

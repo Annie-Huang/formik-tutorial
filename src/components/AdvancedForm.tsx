@@ -13,7 +13,7 @@ const AdvancedForm = () => {
           {/*  value={props.values.name}*/}
           {/*  name='name'*/}
           {/*/>*/}
-          <Field type='text' name='name' placeholder='Name' />
+          {/*<Field type='text' name='name' placeholder='Name' />*/}
 
           <CustomInput
             label='Username'

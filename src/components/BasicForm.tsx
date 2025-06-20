@@ -26,17 +26,24 @@ const onSubmit = async (values: Values, actions: FormikHelpers<Values>) => {
 
 const BasicForm = () => {
   // const formik = useFormik({
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: {
-        email: '',
-        age: '',
-        password: '',
-        confirmPassword: '',
-      },
-      validationSchema: basicSchema,
-      onSubmit,
-    });
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+  } = useFormik({
+    initialValues: {
+      email: '',
+      age: '',
+      password: '',
+      confirmPassword: '',
+    },
+    validationSchema: basicSchema,
+    onSubmit,
+  });
 
   // console.log(formik);
   console.log('values =', values);
@@ -99,7 +106,9 @@ const BasicForm = () => {
         <p className='error'>{errors.confirmPassword}</p>
       )}
 
-      <button type='submit'>Submit</button>
+      <button disabled={isSubmitting} type='submit'>
+        Submit
+      </button>
     </form>
   );
 };

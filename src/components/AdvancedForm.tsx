@@ -1,9 +1,14 @@
 import { Field, Form, Formik } from 'formik';
 import CustomInput from './CustomInput';
+import { advancedSchema } from '../schemas';
 
 const AdvancedForm = () => {
   return (
-    <Formik initialValues={{ username: 'jared' }} onSubmit={() => {}}>
+    <Formik
+      initialValues={{ username: 'jared', jobType: '', acceptedTos: false }}
+      validationSchema={advancedSchema}
+      onSubmit={() => {}}
+    >
       {(props) => (
         <Form>
           {/*<input*/}

@@ -1,10 +1,11 @@
 import { useField } from 'formik';
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface CustomSelectProps {
   label: string;
   name: string;
   placeholder: string;
+  children: ReactNode;
 }
 
 const CustomSelect: FC<CustomSelectProps> = ({ label, ...props }) => {

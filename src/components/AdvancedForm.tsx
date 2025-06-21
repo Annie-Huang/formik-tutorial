@@ -1,15 +1,31 @@
-import { Field, Form, Formik } from 'formik';
+import { Field, Form, Formik, FormikHelpers } from 'formik';
 import CustomInput from './CustomInput';
 import { advancedSchema } from '../schemas';
 import CustomSelect from './CustomSelect';
 import CustomCheckbox from './CustomCheckbox';
 
+type Values = {
+  username: string;
+  jobType: string;
+  acceptedTos: boolean;
+};
+
+const onSubmit = async (values: Values, actions: FormikHelpers<Values>) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  actions.resetForm();
+};
+
 const AdvancedForm = () => {
+  const initialValues: Values = {
+    username: 'jared',
+    jobType: '',
+    acceptedTos: false,
+  };
   return (
     <Formik
-      initialValues={{ username: 'jared', jobType: '', acceptedTos: false }}
+      initialValues={initialValues}
       validationSchema={advancedSchema}
-      onSubmit={() => {}}
+      onSubmit={onSubmit}
     >
       {(props) => (
         <Form>

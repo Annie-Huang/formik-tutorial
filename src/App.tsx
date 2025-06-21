@@ -4,7 +4,7 @@ import BasicForm from './components/BasicForm';
 import AdvancedForm from './components/AdvancedForm';
 
 function App() {
-  const [view, setView] = useState('basic');
+  const [view, setView] = useState('advanced');
   return (
     <div className='App'>
       <nav>
